@@ -1,15 +1,11 @@
 import React from "react";
-import shareTime from "../assets/portfolio/shareTime.PNG";
+import { useTranslation } from "react-i18next";
+
+import { portafolios } from "../utils/data";
 
 const Portafolio = () => {
-  const portafolios = [
-    {
-      id: 1,
-      src: shareTime,
-      demo: "https://sharetime.netlify.app/",
-      code: "https://github.com/firigoyen/sharetime",
-    },
-  ];
+
+  const [t] = useTranslation("global");
 
   return (
     <div
@@ -19,9 +15,9 @@ const Portafolio = () => {
       <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
         <div className="pb-8">
           <p className="text-4xl font-bold inline border-b-4 border-gray-500">
-            Portafolio
+            {t("portafolio.title")}
           </p>
-          <p className="py-6">Estos son algunos de mis proyectos</p>
+          <p className="py-6">{t("portafolio.description")}</p>
         </div>
 
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0">

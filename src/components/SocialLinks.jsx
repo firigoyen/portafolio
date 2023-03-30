@@ -2,8 +2,12 @@ import React from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import { BsFillPersonLinesFill } from "react-icons/bs";
+import { useTranslation } from "react-i18next";
 
 const SocialLinks = () => {
+
+  const [t] = useTranslation("global");
+
   const links = [
     {
       id: 1,
@@ -28,7 +32,7 @@ const SocialLinks = () => {
       id: 3,
       child: (
         <>
-          Mail <HiOutlineMail size={30} />
+          {t("socialLinks.mail")} <HiOutlineMail size={30} />
         </>
       ),
       href: "mailto:irigoyen.retamales@gmail.com",
@@ -37,10 +41,10 @@ const SocialLinks = () => {
       id: 4,
       child: (
         <>
-          Resume <BsFillPersonLinesFill size={30} />
+          {t("socialLinks.resume")} <BsFillPersonLinesFill size={30} />
         </>
       ),
-      href: "/resume.pdf",
+      href: "CV_F.IRIGOYEN.pdf",
       style: "rounded-br-md",
       download: true,
     },

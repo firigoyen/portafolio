@@ -1,24 +1,22 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const About = () => {
+
+  const [t] = useTranslation("global");
+
   return (
-    <div name="acerca" className="w-full h-screen bg-gradient-to-b from-gray-800 to-black text-white">
+    <div name="about" className="w-full h-screen bg-gradient-to-b from-gray-800 to-black text-white">
       <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
         <div className="pb-8">
-          <p className="text-4xl font-bold inline border-b-4 border-gray-500">Acerca</p>
+          <p className="text-4xl font-bold inline border-b-4 border-gray-500">{t("about.title")}</p>
         </div>
-        <p className="text-xl mt-20">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
-          asperiores nobis sunt sit? Recusandae expedita voluptas eveniet,
-          quaerat accusantium, cupiditate itaque quisquam quas repudiandae animi
-          nobis earum nisi ab ut.
+        <p className="text-xl mt-20 pr-2">
+          {t("about.fisrtParagraph")}
         </p>
         <br />
         <p className="text-xl">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro
-          repellendus provident, facere suscipit corrupti magni commodi? Qui
-          recusandae tenetur accusamus corporis esse impedit expedita odio velit
-          earum ullam? Tenetur, excepturi.
+          {t("about.secondParagraph")}  
         </p>
       </div>
     </div>

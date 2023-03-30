@@ -1,0 +1,38 @@
+{
+    "navBar": {
+        "home": "Home",
+        "about": "About",
+        "portafolio": "Portafolio",
+        "experience": "Experience",
+        "contact": "Contact"
+    },
+    "home": {
+        "hero": "I'm a Full Stack Developer",
+        "homeAbout": "I enjoy creating and coding solutions, specializing in building digital experiences that can help people resolve problems and leads to the success of the overall product."
+    },
+    "about": {
+        "title" : "About",
+        "fisrtParagraph" : "Hello! my name is Fernando, I'm a software developer with experience building web aplications, since I've finished my studuies as Computer Engineer back in 2017, I have worked on web envirioments, with languages and technologies such as JavaScript (ES6+), PHP, Java, Git, Node.js and React.",
+        "secondParagraph" : "Currently, I work at an aduana's agency as a web developer, mantaining the main plataform, proposing and implementing scalable solutions to identify issues, handling errors, engineering new featurings, refactoring and testing the code. Mostly based on Linux ecosystems, primarily using HTML, CSS and JavaScript for the Frontend and PHP, Java and MySQL at the Backend, using REST and SOAP Web Services for data interchange."
+    },
+    "portafolio" : {
+        "title" : "Portafolio",
+        "description" : "Check out some of my work and projects"
+    },
+    "experience" : {
+        "title": "Experience",
+        "description" : "These are the technologies I've worked with"
+    },
+    "contact" : {
+        "title" : "Contact",
+        "description" : "Submit the form below to get in touch with me",
+        "nameLabel" : "Enter your name",
+        "emailLabel" : "Leave a message",
+        "messageLabel" : "Enter your email",
+        "button" : "Let's Talk"
+    },
+    "socialLinks" : {
+        "mail" : "Mail",
+        "resume": "Resume"
+    }  
+}

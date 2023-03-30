@@ -1,11 +1,15 @@
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Link } from "react-scroll";
+import { useTranslation } from "react-i18next";
 
-import { navLinks } from '../utils/data';
+import { LanguageSel } from "./LanguageSel";
+import { navLinks } from "../utils/data";
 
 function NavBar() {
   const [nav, setNav] = useState(false);
+
+  const [t] = useTranslation("global");
 
   return (
     <div className="flex justify-between items-center w-full h-20 px-4 text-white bg-black fixed">
@@ -19,10 +23,15 @@ function NavBar() {
             className="px-4 cursor-pointer capitalize font-medium text-gray-500 hover:scale-105 duration-200"
           >
             <Link to={link} smooth duration={500}>
-              {link}
+              {t(`navBar.${link}`)}
             </Link>
           </li>
         ))}
+        <li className="px-4 cursor-pointer capitalize font-medium text-gray-500 hover:scale-105 duration-200">
+          <div className="flex justify-between items-center">
+            <LanguageSel />
+          </div>
+        </li>
       </ul>
       <div
         onClick={() => setNav(!nav)}
@@ -44,10 +53,15 @@ function NavBar() {
                 smooth
                 duration={500}
               >
-                {link}
+                {t(`navBar.${link}`)}
               </Link>
             </li>
           ))}
+          <li>
+            <div className="flex items-center mt-6 p-4 border border-gray-200 rounded dark:border-gray-700">
+              <LanguageSel />
+            </div>
+          </li>
         </ul>
       )}
     </div>
